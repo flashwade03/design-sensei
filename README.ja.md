@@ -8,7 +8,7 @@
 場当たり的なプロンプティングの代わりに、実際に機能する構造化されたワークフロー。
 
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-blueviolet?style=for-the-badge)](https://claude.ai)
-[![Version](https://img.shields.io/badge/version-0.2.6-blue?style=for-the-badge)](#)
+[![Version](https://img.shields.io/badge/version-0.4.0-blue?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md)
@@ -30,24 +30,25 @@ AIコーディングは強力ですが、構造なしに使うとカオスです
 
 ## スキル
 
-### `vibe-design` — 必要な分だけ設計する
+### `vibe-design` — ラフなアイデアから必要十分な設計まで
 
 > *"設計 = 決定 + 制約 + マイルストーン。疑似コードではない。"*
 
-バイブコーディングに最適なレベルの設計ドキュメントを作成します。8,000行の設計ドキュメントはもう終わり。
+ラフなアイデア探索から構造化された設計ドキュメントまで全過程をカバー。`/design`で開始。
 
 | ステップ | 内容 |
 |---------|------|
+| コンテキスト探索 | 質問の前にプロジェクト状態を把握。 |
 | スコープチェック | 設計ドキュメントは必要か？不要ならすぐ実装。 |
-| ユーザー対話 | 質問は1つずつ。自由回答より選択肢優先。 |
+| アイデア探索 | 質問は1つずつ。2-3のアプローチをトレードオフと共に提案。 |
 | 決定成熟度 | 確定した決定にのみ根拠。候補はリストのみ。 |
 | ドメインチェックリスト | 見落とし決定なく、漏れなく。 |
 | 作成 & 検証 | 約200-300行。すべての行が決定であり、実装ではない。 |
 
 ```
+> /design
 > 設計して
-> アーキテクチャを決めて
-> design a feature
+> アイデアを整理しよう
 ```
 
 ---
@@ -132,6 +133,8 @@ fablers-claude-harness/
 ├── .claude-plugin/
 │   ├── plugin.json              # プラグインマニフェスト
 │   └── marketplace.json         # マーケットプレイスメタデータ
+├── commands/
+│   └── design.md                # /designコマンド
 └── skills/
     ├── vibe-design/             # 設計方法論
     │   ├── SKILL.md

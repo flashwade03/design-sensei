@@ -8,7 +8,7 @@
 즉흥적인 프롬프팅 대신, 실제로 작동하는 구조화된 워크플로우.
 
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-blueviolet?style=for-the-badge)](https://claude.ai)
-[![Version](https://img.shields.io/badge/version-0.2.6-blue?style=for-the-badge)](#)
+[![Version](https://img.shields.io/badge/version-0.4.0-blue?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md)
@@ -30,24 +30,25 @@ AI 코딩은 강력하지만, 구조 없이 쓰면 혼돈입니다:
 
 ## 스킬
 
-### `vibe-design` — 딱 필요한 만큼만 설계
+### `vibe-design` — 아이디어부터 딱 필요한 만큼의 설계까지
 
 > *"설계 = 결정 + 제약 + 마일스톤. 절대 의사코드 아님."*
 
-바이브 코딩에 최적화된 수준의 설계 문서를 만들어줍니다. 8,000줄짜리 설계 문서는 이제 끝.
+러프한 아이디어 탐색부터 구조화된 설계 문서까지 전 과정을 커버합니다. `/design`으로 시작.
 
 | 단계 | 하는 일 |
 |------|--------|
+| 컨텍스트 탐색 | 질문 전에 프로젝트 상태 먼저 파악. |
 | 스코프 체크 | 설계 문서가 필요한가? 불필요하면 바로 구현. |
-| 사용자 대화 | 질문 하나씩. 열린 질문보다 선택지 우선. |
+| 아이디어 탐색 | 질문 하나씩. 2-3개 접근 방식을 트레이드오프와 함께 제안. |
 | 결정 성숙도 | 확정 결정에만 근거. 후보는 불릿 리스트만. |
 | 도메인 체크리스트 | 빠진 결정 없이 꼼꼼하게. |
 | 작성 & 검증 | ~200-300줄. 모든 줄이 결정이지, 구현이 아님. |
 
 ```
+> /design
 > 설계해줘
-> 아키텍처 잡아줘
-> design a feature
+> 아이디어 좀 정리하자
 ```
 
 ---
@@ -132,6 +133,8 @@ fablers-claude-harness/
 ├── .claude-plugin/
 │   ├── plugin.json              # 플러그인 매니페스트
 │   └── marketplace.json         # 마켓플레이스 메타데이터
+├── commands/
+│   └── design.md                # /design 커맨드
 └── skills/
     ├── vibe-design/             # 설계 방법론
     │   ├── SKILL.md
