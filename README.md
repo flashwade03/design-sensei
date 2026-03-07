@@ -8,7 +8,7 @@ A Claude Code plugin that encodes battle-tested design methodologies into reusab
 No more ad-hoc prompting — just structured workflows that actually work.
 
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-blueviolet?style=for-the-badge)](https://claude.ai)
-[![Version](https://img.shields.io/badge/version-0.4.0-blue?style=for-the-badge)](#)
+[![Version](https://img.shields.io/badge/version-0.4.1-blue?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md)
@@ -34,7 +34,7 @@ AI-assisted coding is powerful, but without structure it's chaos. You end up wit
 
 > *"Design = Decisions + Constraints + Milestones. Never pseudocode."*
 
-Covers the full spectrum: from rough idea exploration to structured design documents. Use `/design` to start.
+Covers the full spectrum: from rough idea exploration to structured design documents. Use `/sketch` to start.
 
 | Step | What happens |
 |------|-------------|
@@ -46,7 +46,7 @@ Covers the full spectrum: from rough idea exploration to structured design docum
 | Write & Validate | Output fits ~200-300 lines. Every line is a decision, not implementation. |
 
 ```
-> /design
+> /sketch
 > 설계해줘
 > 아이디어 좀 정리하자
 ```
@@ -134,7 +134,7 @@ fablers-claude-harness/
 │   ├── plugin.json              # Plugin manifest
 │   └── marketplace.json         # Marketplace metadata
 ├── commands/
-│   └── design.md                # /design command
+│   └── sketch.md                # /sketch command
 └── skills/
     ├── vibe-design/             # Design methodology
     │   ├── SKILL.md

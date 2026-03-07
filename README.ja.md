@@ -8,7 +8,7 @@
 場当たり的なプロンプティングの代わりに、実際に機能する構造化されたワークフロー。
 
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-blueviolet?style=for-the-badge)](https://claude.ai)
-[![Version](https://img.shields.io/badge/version-0.4.0-blue?style=for-the-badge)](#)
+[![Version](https://img.shields.io/badge/version-0.4.1-blue?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md)
@@ -34,7 +34,7 @@ AIコーディングは強力ですが、構造なしに使うとカオスです
 
 > *"設計 = 決定 + 制約 + マイルストーン。疑似コードではない。"*
 
-ラフなアイデア探索から構造化された設計ドキュメントまで全過程をカバー。`/design`で開始。
+ラフなアイデア探索から構造化された設計ドキュメントまで全過程をカバー。`/sketch`で開始。
 
 | ステップ | 内容 |
 |---------|------|
@@ -46,7 +46,7 @@ AIコーディングは強力ですが、構造なしに使うとカオスです
 | 作成 & 検証 | 約200-300行。すべての行が決定であり、実装ではない。 |
 
 ```
-> /design
+> /sketch
 > 設計して
 > アイデアを整理しよう
 ```
@@ -134,7 +134,7 @@ fablers-claude-harness/
 │   ├── plugin.json              # プラグインマニフェスト
 │   └── marketplace.json         # マーケットプレイスメタデータ
 ├── commands/
-│   └── design.md                # /designコマンド
+│   └── sketch.md                # /sketchコマンド
 └── skills/
     ├── vibe-design/             # 設計方法論
     │   ├── SKILL.md

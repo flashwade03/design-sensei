@@ -8,7 +8,7 @@
 즉흥적인 프롬프팅 대신, 실제로 작동하는 구조화된 워크플로우.
 
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-blueviolet?style=for-the-badge)](https://claude.ai)
-[![Version](https://img.shields.io/badge/version-0.4.0-blue?style=for-the-badge)](#)
+[![Version](https://img.shields.io/badge/version-0.4.1-blue?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md)
@@ -34,7 +34,7 @@ AI 코딩은 강력하지만, 구조 없이 쓰면 혼돈입니다:
 
 > *"설계 = 결정 + 제약 + 마일스톤. 절대 의사코드 아님."*
 
-러프한 아이디어 탐색부터 구조화된 설계 문서까지 전 과정을 커버합니다. `/design`으로 시작.
+러프한 아이디어 탐색부터 구조화된 설계 문서까지 전 과정을 커버합니다. `/sketch`로 시작.
 
 | 단계 | 하는 일 |
 |------|--------|
@@ -46,7 +46,7 @@ AI 코딩은 강력하지만, 구조 없이 쓰면 혼돈입니다:
 | 작성 & 검증 | ~200-300줄. 모든 줄이 결정이지, 구현이 아님. |
 
 ```
-> /design
+> /sketch
 > 설계해줘
 > 아이디어 좀 정리하자
 ```
@@ -134,7 +134,7 @@ fablers-claude-harness/
 │   ├── plugin.json              # 플러그인 매니페스트
 │   └── marketplace.json         # 마켓플레이스 메타데이터
 ├── commands/
-│   └── design.md                # /design 커맨드
+│   └── sketch.md                # /sketch 커맨드
 └── skills/
     ├── vibe-design/             # 설계 방법론
     │   ├── SKILL.md
